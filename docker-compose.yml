@@ -1,0 +1,46 @@
+
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  backend:
+    build:
+      context: ./grinberry_back
+      dockerfile: Dockerfile
+    image: bombk1nkpi/grinberry-todo-back:latest
+    container_name: grinberry-todo-back
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/${DB_NAME}
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+      - SSL_PASSWORD=${SSL_PASSWORD}
+    ports:
+      - "8443:8443"
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./grinberry_front
+      dockerfile: Dockerfile
+    image: bombk1nkpi/grinberry-todo-front:latest
+    container_name: grinberry-frontend
+    ports:
+      - "443:443"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
+
+

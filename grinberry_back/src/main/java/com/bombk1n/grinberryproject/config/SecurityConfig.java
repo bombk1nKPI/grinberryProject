@@ -74,7 +74,7 @@ public class SecurityConfig {
         configuration.addAllowedOrigin("https://localhost");
         configuration.addAllowedOrigin("https://localhost:443");
         configuration.addAllowedOrigin("https://46.101.122.84");
-        configuration.addAllowedOrigin("https://grinberry.com");
+        configuration.addAllowedOrigin("https://grinberry.me");
         configuration.addAllowedMethod("*");
         configuration.addAllowedHeader("*");
         configuration.setAllowCredentials(true);

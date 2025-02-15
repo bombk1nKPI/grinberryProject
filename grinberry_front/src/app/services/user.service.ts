@@ -10,7 +10,7 @@ export class UserService {
   private baseUrl: string;
 
   constructor(private readonly http: HttpClient) {
-    this.baseUrl = 'https://localhost:8443/api/user'
+    this.baseUrl = 'https://grinberry.me:8443/api/user'
 }
 getUserProfile(): Observable<User> {
   return this.http.get<User>(`${this.baseUrl}/profile`);

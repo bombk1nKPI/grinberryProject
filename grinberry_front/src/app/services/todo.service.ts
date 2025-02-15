@@ -8,7 +8,7 @@ import { Task } from '../lib/model/task';
   providedIn: 'root'
 })
 export class TodoService {
-  private apiUrl = 'https://localhost:8443/api/todo';
+  private apiUrl = 'https://grinberry.me:8443/api/todo';
 
   constructor(private http: HttpClient) {}
 

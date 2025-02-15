@@ -12,7 +12,7 @@ export class AuthService {
   private isAuthenticatedSubject = new BehaviorSubject<boolean>(this.hasToken());
 
   constructor(private readonly http: HttpClient) {
-    this.baseUrl = 'https://localhost:8443/api/auth';
+    this.baseUrl = 'https://grinberry.me:8443/api/auth';
   }
 
   login(username: string, password: string): Observable<any> {

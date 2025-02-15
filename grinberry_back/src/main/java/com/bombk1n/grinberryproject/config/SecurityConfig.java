@@ -73,6 +73,8 @@ public class SecurityConfig {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.addAllowedOrigin("https://localhost");
         configuration.addAllowedOrigin("https://localhost:443");
+        configuration.addAllowedOrigin("https://46.101.122.84");
+        configuration.addAllowedOrigin("https://grinberry.com");
         configuration.addAllowedMethod("*");
         configuration.addAllowedHeader("*");
         configuration.setAllowCredentials(true);

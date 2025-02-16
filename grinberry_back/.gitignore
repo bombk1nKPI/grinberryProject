@@ -32,4 +32,4 @@ build/
 ### VS Code ###
 .vscode/
 
-grinberry_ssl.pfx
+grinberry_ssl.p12

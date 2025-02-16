@@ -40,3 +40,7 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+grinberry_me.ca-bundle
+grinberry_me.crt
+private.key

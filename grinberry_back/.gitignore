@@ -32,4 +32,4 @@ build/
 ### VS Code ###
 .vscode/
 
-grinberry_ssl.p12
+/src/main/resources/ssl/

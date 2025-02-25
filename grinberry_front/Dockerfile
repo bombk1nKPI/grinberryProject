@@ -18,7 +18,7 @@ COPY --from=build app/dist/grinberry-project/browser  /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 COPY ssl/grinberry_me.crt /etc/nginx/ssl/grinberry_me.crt
-COPY ssl/private.key /etc/nginx/ssl/private.key
+COPY ssl/private_decrypted.key /etc/nginx/ssl/private.key
 COPY ssl/grinberry_me.ca-bundle /etc/nginx/ssl/grinberry_me.ca-bundle
 
 EXPOSE 80

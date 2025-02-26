@@ -77,8 +77,8 @@
             "development": {
               "buildTarget": "grinberry-prject:build:development",
               "ssl": true,
-              "sslKey": "ssl/private.key",
-              "sslCert": "ssl/certificate.crt"
+              "sslKey": "ssl/private_decrypted.key",
+              "sslCert": "ssl/grinberry_me.crt"
             }
           },
           "defaultConfiguration": "development"
@@ -110,5 +110,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

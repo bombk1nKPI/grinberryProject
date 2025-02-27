@@ -1,7 +1,6 @@
-import { Component } from '@angular/core'
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
-
 
 @Component({
   selector: 'app-signup',
@@ -22,7 +21,7 @@ export class SignupComponent {
       this.login();
     }, error => {
       console.error('Registration error', error);
-      this.errorMessage = error.error.message || 'Registration failed';
+      this.errorMessage = error.error.password || error.error.message || 'Registration failed';
     });
   }
 

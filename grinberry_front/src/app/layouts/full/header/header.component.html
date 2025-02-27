@@ -8,7 +8,6 @@
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
       <li><a routerLink="/home" routerLinkActive="link-dark" class="nav-link px-2" [ngClass]="{'link-secondary': isActive('/home')}">Home</a></li>
       <li *ngIf="isAuthenticated"><a routerLink="/todo" routerLinkActive="link-dark" class="nav-link px-2" [ngClass]="{'link-secondary': isActive('/todo')}">ToDo</a></li>
-      <li *ngIf="isAuthenticated"><a routerLink="/profile" routerLinkActive="link-dark" class="nav-link px-2" [ngClass]="{'link-secondary': isActive('/profile')}">Profile</a></li>
       <li><a routerLink="/about" routerLinkActive="link-dark" class="nav-link px-2" [ngClass]="{'link-secondary': isActive('/about')}">About</a></li>
     </ul>
     <div class="col-md-3 text-end">

@@ -12,7 +12,6 @@ import { AboutComponent } from './pages/about/about.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { ProfileComponent } from './pages/profile/profile.component';
 import { AuthInterceptor } from './services/auth-interceptor';
 import { TodoComponent } from './pages/todo/todo.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -33,7 +32,6 @@ import { TaskDialogComponent } from './pages/todo/task-dialog/task-dialog.compon
     AboutComponent,
     SignupComponent,
     LoginComponent,
-    ProfileComponent,
     TodoComponent,
     TaskDialogComponent
   ],
